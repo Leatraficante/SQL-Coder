@@ -1,0 +1,16 @@
+id_producto,nombre,modelo,descripcion,cantidad,precio
+1,HELADERA DREAN,HDF 4567,"Capacidad de 300 litros, con congelador, eficiencia energética A+ y control de temperatura.",50,18750
+2,HELADERA PATRICK,LTG 789,"Tamaño de 200 litros, refrigeración directa, clasificación energética A y descongelamiento manual.",25,12500
+3,TV NOBLEX,TVN 15,"Pantalla LED de 42 pulgadas, resolución Full HD, conexiones HDMI y USB, y sonido estéreo.",55,24999.99
+4,TV SAMSUNG,TVS 2314,"Pantalla QLED de 55 pulgadas, resolución 4K, tecnología HDR, conexión Wi-Fi y asistente de voz integrado.",78,38750.5
+5,LAVARROPAS DREAN,LVD789,"Capacidad de 8 kg, velocidad de centrifugado de 1200 RPM, y múltiples programas de lavado.",15,16200.75
+6,LAVARROPAS PHILLIPS,LVPH,"Capacidad de 7 kg, velocidad de centrifugado de 1000 RPM, y funciones de lavado rápido y eficiente.",150,14999
+7,MICROONDAS LG,LG789,"Capacidad de 25 litros, potencia de 900 W, múltiples niveles de potencia y funciones de descongelado.",23,5500.25
+8,MICROONDAS DREAN,DR458,"Capacidad de 20 litros, potencia de 700 W, múltiples niveles de potencia y función de grill.",15,4750.5
+9,NOTEBOOK LENOVO,LEN 321,"Pantalla de 15.6 pulgadas, procesador Intel Core i5, 8 GB de RAM y disco duro de 1 TB.",67,34999
+10,NOTEBOOK ACER,AC65,"Pantalla de 14 pulgadas, procesador AMD Ryzen 5, 8 GB de RAM y almacenamiento SSD de 256 GB.",89,28750
+11,CELULAR SAMSUNG,SGG 45,"Pantalla Super AMOLED de 6.2 pulgadas, cámara trasera de 12 MP, 64 GB de almacenamiento y resistencia al agua.",85,20499.99
+12,CELULAR ALCATEL,ALC78,"Pantalla IPS de 5.5 pulgadas, cámara trasera de 13 MP, 32 GB de almacenamiento y lector de huellas.",14,6999.5
+13,AIRE A/C BGH,ACBG 888,"Capacidad de enfriamiento de 12.000 BTU, eficiencia energética A++, modo de sleep y control remoto.",57,29999
+14,AIRE A/C LG,ACAI002,"Capacidad de enfriamiento de 18.000 BTU, eficiencia energética A+, función de deshumidificación y temporizador.",10,36250.75
+15,SCOOTER PHILCO,RUN7457,"Motor eléctrico de 250 W, velocidad máxima de 25 km/h, autonomía de 20 km y frenos de disco.",20,18750.5
