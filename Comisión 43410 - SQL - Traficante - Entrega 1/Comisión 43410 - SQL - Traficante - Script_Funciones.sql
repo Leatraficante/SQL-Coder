@@ -27,17 +27,18 @@ END $$
 
 
 
-/* la siguiente funcion era para calcular el precio final de un producto a partir de su id; en caso de querer hacer un aumento % de precio; pero
-me tira el siguiente error "Error Code: 1172. Result consisted of more than one row" y no se qué estoy haciendo mal: */
+-- funcion para calcular el precio final de un producto a partir de su id; en caso de querer hacer un aumento % de precio 
 delimiter $$
-CREATE FUNCTION precio_final_aumento (id_producto INT, 
+CREATE FUNCTION precio_final_aumento2 (id_producto1 INT, 
 									aumento float) 
 RETURNS DECIMAL(10, 2)
 DETERMINISTIC
 BEGIN
     DECLARE precio_original DECIMAL(10, 2);
     DECLARE precio_final DECIMAL(10, 2);
-        SELECT precio INTO precio_original FROM producto WHERE id_producto = id_producto;
-        SET precio_final = precio_original * (1 + (aumento / 100));
+        SELECT precio INTO precio_original FROM producto WHERE id_producto = id_producto1;
+        SET precio_final = precio_original + (precio_original * (aumento / 100));
         RETURN precio_final;
 END $$
+
+select precio_final_aumento2 (1, 7.00)
