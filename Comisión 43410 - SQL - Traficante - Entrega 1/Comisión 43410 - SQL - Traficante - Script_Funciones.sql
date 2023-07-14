@@ -27,7 +27,7 @@ END $$
 
 
 
--- funcion para calcular el precio final de un producto a partir de su id; en caso de querer hacer un aumento % de precio 
+/* la siguiente funcion era para calcular el precio final de un producto a partir de su id; en caso de querer hacer un aumento % de precio*/ 
 delimiter $$
 CREATE FUNCTION precio_final_aumento2 (id_producto1 INT, 
 									aumento float) 

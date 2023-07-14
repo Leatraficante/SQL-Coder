@@ -1,4 +1,4 @@
--- Trigger que audita cada vez que hay una variacion en el stock de los productos: 
+-- Trigger que audita cada vez que hay una variacion en el stock de los productos:
 
 drop trigger if exists trg_auditoria_stock;
 drop table if exists trg_auditoria_stock;
@@ -25,8 +25,8 @@ BEGIN
 END$$
 DELIMITER ;
 
--- Trigger que audita cada vez que se registra un nuevo cliente: 
 
+-- Trigger que audita cada vez que se registra un nuevo cliente: 
 
 create table log_cliente (
 id_log int auto_increment,
@@ -50,6 +50,7 @@ begin
     values (new.id_cliente, new.nombre, new.apellido, new.email, new.calle, new.numero, new.localidad, new.tel);
 end$$
 delimiter 
+
 
 /* EJEMPLO:
 INSERT INTO cliente (id_cliente, nombre, apellido, email, calle, numero, localidad, tel)

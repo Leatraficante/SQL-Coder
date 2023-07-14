@@ -19,10 +19,9 @@ END $$
 call oc_estados("COMPLETA") -- puede ser "COMPLETA" "CANCELADA" "EN PROCESO"
 
 
--- SP para agregar un cliente, en un caso ideal el ID_Cliente seria autoincremental, pero cuando cree la tabla no lo agregué y ahora no la puedo modificar. 
+-- SP para agregar un cliente, ID_Cliente seria autoincremental:
 DELIMITER $$
 CREATE PROCEDURE InsertarCliente(
-	IN id_cliente int,
     IN nombre VARCHAR(20),
     IN apellido VARCHAR(20),
     IN email VARCHAR(100),
@@ -32,10 +31,10 @@ CREATE PROCEDURE InsertarCliente(
     IN tel INT
 )
 BEGIN
-    INSERT INTO cliente (id_cliente, nombre, apellido, email, calle, numero, localidad, tel)
-    VALUES (id_cliente, nombre, apellido, email, calle, numero, localidad, tel);
+    INSERT INTO cliente (nombre, apellido, email, calle, numero, localidad, tel)
+    VALUES (nombre, apellido, email, calle, numero, localidad, tel);
 END $$
-CALL InsertarCliente(16,'Leandro', 'Traficante', 'leatrafi@gmail.com', 'Llalal', '23', 'Martinez', '5555555');
+CALL InsertarCliente('Leandro', 'Traficante', 'leatrafi@gmail.com', 'Llalal', '23', 'Martinez', '5555555');
 select * from cliente
 
 
