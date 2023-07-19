@@ -1,0 +1,28 @@
+use ecommerce; -- NOMBRE DE MI DB
+
+-- CREACIÓN DE USUARIOS:
+CREATE USER usuario1@localhost IDENTIFIED BY 'pass123';
+CREATE USER usuario2@localhost IDENTIFIED BY '123pass';
+
+-- ELIMINAR TODOS LOS PERMISOS QUE CADA USUARIO TIENE SOBRE LA DB:
+REVOKE ALL ON *.* FROM usuario1@localhost
+REVOKE ALL ON *.* FROM usuario2@localhost;
+
+-- GARANTIZAR LOS PERMISOS SELECTIVOS A CADA USUARIO:
+GRANT SELECT ON ecommerce.* TO usuario1@localhost; -- PERMISO DE SOLO LECTURA
+GRANT SELECT, INSERT, UPDATE ON ecommerce.* TO usuario2@localhost; -- PERMISO DE LECTURA, INSERTAR Y MODIFICAR
+
+-- MOSTRAR LOS PERMISOS GARANTIZADOS A CADA USUARIO:
+show grants for usuario1@localhost;
+show grants for usuario2@localhost;
+
+-- EN CASO DE QUE POR ERROR SE HAYAN DADO PERMISOS DE ELIMINAR DATOS, REVOCAR DICHOS PERMISOS:
+REVOKE DELETE ON *.* FROM usuario1@localhost;
+REVOKE DELETE ON *.* FROM usuario2@localhost;
+
+-- CONFIRMAR EN LA TABLA DE BASE DE DATOS LOS PERMISOS QUE TIENE CADA USARIO: 
+use mysql;
+select * from user;
+show tables;
+select * from db;
+
